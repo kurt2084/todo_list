@@ -2,14 +2,6 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose') // 載入 mongoose
-const Schema = mongoose.Schema
-const todoSchema = new Schema({
-  name: {
-    type: String, //資料型別是字串
-    required: true //必填欄位
-  }
-})
-module.exports = mongoose.model('Todo', todoSchema)
 
 // 資料庫連線
 mongoose.connect('mongodb://localhost/todo-list', { useNewUrlParser: true, useUnifiedTopology: true })
