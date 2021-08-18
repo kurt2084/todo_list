@@ -71,6 +71,7 @@ app.post('/todos/:id/edit', (req, res) => {
   return Todo.findById(id)
     .then(todo => {
       todo.name = name
+      todo.isDone = isDone === 'on'
       return todo.save()
     })
     .then(() => res.redirect(`/todos/${id}`))
