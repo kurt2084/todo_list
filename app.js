@@ -3,7 +3,6 @@ const express = require('express')
 const mongoose = require('mongoose')
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
-// 載入 method-override
 const methodOverride = require('method-override')
 
 const routes = require('./routes')
@@ -14,7 +13,6 @@ mongoose.connect('mongodb://localhost/todo-list', { useNewUrlParser: true, useUn
 
 // 取得資料庫連線狀態
 const db = mongoose.connection
-
 // 連線異常
 db.on('error', () => {
   console.log('mongodb error!')
