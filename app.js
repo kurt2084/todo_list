@@ -6,6 +6,7 @@ const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 
 const routes = require('./routes')
+require('./config/mongoose.js')
 const app = express()
 
 // 資料庫連線
